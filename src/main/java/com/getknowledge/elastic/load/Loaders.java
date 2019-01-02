@@ -30,7 +30,6 @@ public class Loaders {
         System.out.println("Loading Data....");
         usersRepository.save(getData());
         System.out.printf("Loading Completed.........");
-
     }
 
     private List<Users> getData() {
