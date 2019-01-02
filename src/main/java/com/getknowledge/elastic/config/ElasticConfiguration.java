@@ -16,6 +16,7 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 public class ElasticConfiguration {
 
 
+	
     @Bean
     public NodeBuilder nodeBuilder() {
         return new NodeBuilder();
