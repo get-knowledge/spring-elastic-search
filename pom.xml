@@ -11,8 +11,9 @@
 	<groupId>com.getknowledge.elastic</groupId>
 	<artifactId>spring-elastic-search</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>spring-elastic-search</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot and elastic search </description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
