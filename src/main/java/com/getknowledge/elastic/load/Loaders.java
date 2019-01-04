@@ -34,10 +34,21 @@ public class Loaders {
 
     private List<Users> getData() {
         List<Users> userses = new ArrayList<>();
+        
         userses.add(new Users(123L,"Yogi", "Java Developer", 32000L));
         userses.add(new Users(1234L,"Manoj", "PM", 32000L));
         userses.add(new Users(1235L,"Sagar", "Java Developer", 22000L));
         userses.add(new Users(1235L,"Dhananjy", "IT-Sector", 52000L));
+        
+        userses.add(new Users(12354L,"Sagar1", "Java Developer", 2207600L));
+        userses.add(new Users(12353L,"Dhananjy2", "IT-Sector", 5200670L));
+        
+        userses.add(new Users(12351L,"Sagar21", "Java Developer", 2204500L));
+        userses.add(new Users(12355L,"Dhananjy121", "IT-Sector", 520050L));
+        
+        userses.add(new Users(12359L,"Sagar1245", "Java Developer", 220030L));
+        userses.add(new Users(123501L,"Dhananjy3453", "IT-Sector", 520200L));
+        
         return userses;
     }
 }
