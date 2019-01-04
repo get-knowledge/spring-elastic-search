@@ -10,6 +10,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.getknowledge.elastic.jparepository.UsersJPARepository;
 import com.getknowledge.elastic.model.Users;
 import com.getknowledge.elastic.repository.UsersRepository;
 
@@ -22,13 +23,20 @@ public class Loaders {
     @Autowired
     UsersRepository usersRepository;
 
+    @Autowired
+    UsersJPARepository usersJPARepository;
+    
     @PostConstruct
     @Transactional
     public void loadAll(){
 
         operations.putMapping(Users.class);
         System.out.println("Loading Data....");
-        usersRepository.save(getData());
+        List<Users> data = getData();
+        usersJPARepository.save(data); // store data in database
+        List<Users> lstdata = usersJPARepository.findAll();
+        
+        usersRepository.save(lstdata); //load data in elasticserch
         System.out.printf("Loading Completed.........");
     }
 
